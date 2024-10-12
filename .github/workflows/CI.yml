@@ -22,3 +22,5 @@ jobs:
                 python ./scripts/fetch_info.py
               env: 
                 TOKEN: ${{ secrets.TOKEN }}
+            - name: test the scripts
+              run: pytest ./scripts/test.py
