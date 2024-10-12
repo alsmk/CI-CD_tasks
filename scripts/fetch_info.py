@@ -20,6 +20,7 @@ def fetch_info(url):
 def print_commit_info():
     url = f"{base_url}/repos/{repo}/commits"
     lis = fetch_info(url)
+    print(lis)
     commit = lis[0]
     print("The latest commit ::")
     print(f"Commit Message: {commit['commit']['message']}")
