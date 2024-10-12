@@ -24,3 +24,5 @@ jobs:
                 TOKEN: ${{ secrets.TOKEN }}
             - name: test the scripts
               run: pytest ./scripts/test.py
+              env: 
+                TOKEN: ${{ secrets.TOKEN }}
