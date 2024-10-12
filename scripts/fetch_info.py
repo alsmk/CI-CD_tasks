@@ -11,7 +11,8 @@ base_url = "https://api.github.com"
 
 def fetch_info(url):
     headers = {"Authorization": f"token {token}"}
-
+    print(url)
+    print(headers)
     response = requests.get(url, headers=headers)
     commits = response.json()
     return commits
