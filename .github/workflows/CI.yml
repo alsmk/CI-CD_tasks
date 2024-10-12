@@ -21,4 +21,4 @@ jobs:
               run: |
                 python ./scripts/fetch_info.py
               env: 
-                token: ${{ secrets.TOKEN }}
+                TOKEN: ${{ secrets.TOKEN }}
