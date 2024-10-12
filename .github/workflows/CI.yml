@@ -26,3 +26,5 @@ jobs:
               run: pytest ./scripts/test.py
               env: 
                 TOKEN: ${{ secrets.TOKEN }}
+            - name: format the code
+              run: black .
