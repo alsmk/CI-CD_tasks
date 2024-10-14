@@ -1,7 +1,7 @@
-import pytest
 from fetch_info import fetch_info
 import unittest
 
+import pytest
 
 class TestCommitInfo(unittest.TestCase):
 
