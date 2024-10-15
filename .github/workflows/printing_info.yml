@@ -7,7 +7,7 @@ on:
     workflow_call:
 jobs:
     print_info:
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         steps:
             - name: checkout to the branch
               uses: actions/checkout@v4
