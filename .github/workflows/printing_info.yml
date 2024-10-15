@@ -5,6 +5,9 @@ on:
             - main
 
     workflow_call:
+      secrets:
+        TOKEN:
+          required: true
 jobs:
     print_info:
         runs-on: ubuntu-latest

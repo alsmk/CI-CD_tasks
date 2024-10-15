@@ -4,6 +4,10 @@ on :
         branches:
             - main
     workflow_call:
+      secrets:
+        TOKEN:
+          required: true
+      
 jobs:
     formatting:
         runs-on: ubuntu-latest
