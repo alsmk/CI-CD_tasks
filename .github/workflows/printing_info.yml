@@ -12,9 +12,9 @@ jobs:
             - name: checkout to the branch
               uses: actions/checkout@v4
             - name: setup python
-              uses: actions/setup-python@v2
+              uses: actions/setup-python@v5
               with:
-                python-version: '3.x'
+                python-version: '3.12'
             - name: install dependancies
               run: |
                 python - m pip install --upgrade pip
