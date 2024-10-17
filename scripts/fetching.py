@@ -18,7 +18,7 @@ def fetch_info(url):
 
 
 def print_commit_info(): 
-    # comment      
+    # comment       
     url = f"{base_url}/repos/{repo}/commits"
     print()
     lis = fetch_info(url)

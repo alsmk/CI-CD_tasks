@@ -13,14 +13,11 @@ jobs:
                 username: ${{ vars.DOCKERHUB_USERNAME  }}
                 password: ${{  secrets.DOCKERHUB_TOKEN  }}
 
-            - name: set up docker Buildx
-              uses: docker/setup-buildx-action@v3
+            - name: build the image 
+              run: docker build . -t ${{ vars.DOCKERHUB_USERNAME  }}/myapp:fromwf
             
-            - name: build and push
-              uses: docker/build-push-action@v6
-              with: 
-                push: true
-                tags: ${{  vars.DOCKERHUB_USERNAME  }}/myapp:latest
+            - name: push the image
+              run: docker push docker.io/${{ vars.DOCKERHUB_USERNAME  }}/myapp:fromwf
 
               
         
