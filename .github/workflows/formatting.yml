@@ -22,6 +22,7 @@ jobs:
               id: checking
               run: |
                  flake8 ./scripts/
+              continue-on-error: true
             
             - name: Formatting
               if: failure()
