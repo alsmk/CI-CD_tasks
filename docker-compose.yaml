@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  act-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - RUNNER_TOKEN=${RUNNER_TOKEN} 
+      - REPO_URL=${REPO_URL}        
+      - RUNNER_NAME=runner-${HOSTNAME}-${RANDOM}
+      - RUNNER_LABELS=self-hosted
+    volumes:
+      - runner-vol:/home/github-runner
+    restart: always
+
+volumes:
+  runner-vol:
