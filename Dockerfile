@@ -23,9 +23,9 @@ RUN curl -o actions-runner.tar.gz -L \
 
 WORKDIR $RUNNER_HOME
 
-USER github-runner
 
 COPY entrypoint.sh $RUNNER_HOME/entrypoint.sh
 RUN chmod +x $RUNNER_HOME/entrypoint.sh
 
+USER github-runner
 ENTRYPOINT ["./entrypoint.sh"]
