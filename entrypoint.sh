@@ -3,7 +3,7 @@
 set -e
 
 export RUNNER_TOKEN="AKNKBIKCVCKPJ7SSYJWPI6DHHQYNI"
-export REPO_URL="hhttps://github.com/alsmk/CI-CD_tasks/"
+export REPO_URL="https://github.com/alsmk/CI-CD_tasks/"
 export RUNNER_NAME="runner-$(hostname)-$RANDOM"
 export RUNNER_LABELS="self-hosted"
 
