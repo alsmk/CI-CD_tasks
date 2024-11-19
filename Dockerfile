@@ -4,6 +4,7 @@ RUN apt-get update && \
     apt-get install -y \
     curl \
     jq \
+    libicu-dev \
     git \
     tar && \
     apt-get clean
