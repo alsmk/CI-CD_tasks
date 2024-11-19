@@ -16,3 +16,5 @@ services:
 
 volumes:
   runner-vol:
+    driver: local
+
