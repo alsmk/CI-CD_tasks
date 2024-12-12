@@ -1,5 +1,5 @@
 pipeline{
-    agent: any
+    agent any
     environment{
          GITHUB_TOKEN = credentials('GITHUB_TOKEN')
     }
