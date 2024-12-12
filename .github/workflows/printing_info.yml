@@ -1,8 +1,6 @@
 name: printing info of commit 
-on:
-    push:
-        branches:
-            - main
+on :
+    workflow_dispatch:
 
     workflow_call:
       secrets:

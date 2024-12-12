@@ -1,8 +1,6 @@
 name : workflow for running python script , formatting and testing
 on :
-    push:
-        branches:
-            - main
+    workflow_dispatch:
 jobs:
     fetch_info:
         runs-on: self-hosted
