@@ -4,6 +4,13 @@ pipeline{
          GITHUB_TOKEN = credentials('GITHUB_TOKEN')
     }
     stages{
+        stage('Clone a smaple repo'){
+            steps{
+                sh '''
+                git clone https://github.com/alsmk/CI-CD_tasks.git
+                '''
+            }
+        }
         stage('Clone Repo'){
             steps {
                 git url: 'https://github.com/alsmk/CI-CD_tasks.git'
