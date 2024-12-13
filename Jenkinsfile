@@ -4,20 +4,27 @@ pipeline{
          GITHUB_TOKEN = credentials('GITHUB_TOKEN')
     }
     stages{
-        stage('Clone repo'){
+        stage('Clone Repo'){
+            steps {
+                git branch: 'main', url: 'https://github.com/alsmk/CI-CD_tasks.git'
+                
+
+            }
+        }
+        stage('Install  Dependencies'){
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+        stage('Run the main task'){
             steps{
                 sh '''
-                git clone https://github.com/alsmk/CI-CD_tasks.git
-                cd CI-CD_tasks/
-                pip install -r requirements.txt
                 echo "TOKEN=$GITHUB_TOKEN" > .env 
                 python ./scripts/fetch_info.py
                 '''
             }
-            
         }
-       
-        
+
     }
     post{
         always{
