@@ -3,7 +3,7 @@ pipeline{
     environment{
          GITHUB_TOKEN = credentials('GITHUB_TOKEN')
     }
-    tool{
+    tools{
         python 'Python3'
     }
     stages{
