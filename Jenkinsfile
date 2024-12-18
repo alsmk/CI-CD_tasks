@@ -3,6 +3,9 @@ pipeline{
     environment{
          GITHUB_TOKEN = credentials('GITHUB_TOKEN')
     }
+    tool{
+        python 'Python3'
+    }
     stages{
         stage('Clone Repo'){
             steps {
