@@ -15,7 +15,7 @@ pipeline{
                 
                 sh '''
                 python3 -m venv env
-                source ./env/bin/activate 
+                . ./env/bin/activate 
                 pip install -r requirements.txt
                 echo "TOKEN=$GITHUB_TOKEN" > .env 
                 python ./scripts/fetch_info.py
