@@ -11,7 +11,7 @@ pipeline{
     stages{
         stage('Clone Repo'){
             steps {
-                git branch: 'main', url: 'https://github.com/alsmk/CI-CD_tasks.git'
+                // git branch: 'main', url: 'https://github.com/alsmk/CI-CD_tasks.git'
                 
                 sh '''
                 python3 -m venv env
