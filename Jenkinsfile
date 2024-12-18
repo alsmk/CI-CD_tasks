@@ -24,6 +24,17 @@ pipeline{
 
             }
         }
+        stage('test results'){
+            steps{
+                sh '''
+                python3 -m venv env
+                . ./env/bin/activate 
+                pip install -r requirements.txt
+                echo "TOKEN=$GITHUB_TOKEN" > .env 
+                python ./scripts/test.py
+                '''
+            }
+        }
         
   
            
