@@ -9,7 +9,7 @@ pipeline{
     }
     
     stages{
-        stage('Clone Repo'){
+        stage('fetching-info'){
             steps {
                 // git branch: 'main', url: 'https://github.com/alsmk/CI-CD_tasks.git'
                 
@@ -24,6 +24,7 @@ pipeline{
 
             }
         }
+        
   
            
 
