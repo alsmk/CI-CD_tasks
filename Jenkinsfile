@@ -1,7 +1,7 @@
 pipeline{
     agent {
         docker {
-            image 'python' 
+            image 'python:latest' 
         }
     }
     environment{
@@ -16,31 +16,27 @@ pipeline{
 
             }
         }
-        stage('Set up python '){
-            steps{
-                 sh 'sudo apt-get install -y python3 python3-pip'
-            }
+        // stage('Set up python '){
+        //     steps{
+        //          sh 'sudo apt-get install -y python3 python3-pip'
+        //     }
            
-        }
-        stage('Install  Dependencies'){
-            steps {
-                sh 'pip install -r requirements.txt'
-            }
-        }
-        stage('Run the main task'){
-            steps{
-                sh '''
-                echo "TOKEN=$GITHUB_TOKEN" > .env 
-                python ./scripts/fetch_info.py
-                '''
-            }
-        }
+        // }
+        // stage('Install  Dependencies'){
+        //     steps {
+        //         sh 'pip install -r requirements.txt'
+        //     }
+        // }
+        // stage('Run the main task'){
+        //     steps{
+        //         sh '''
+        //         echo "TOKEN=$GITHUB_TOKEN" > .env 
+        //         python ./scripts/fetch_info.py
+        //         '''
+        //     }
+        // }
 
     }
-    post{
-        always{
-            cleanWs()
-        }
-    }
+    
 
 }
