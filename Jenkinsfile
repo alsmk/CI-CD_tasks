@@ -14,6 +14,8 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/alsmk/CI-CD_tasks.git'
                 
                 sh '''
+                python3 -m venv env
+                source ./env/bin/activate 
                 pip install -r requirements.txt
                 echo "TOKEN=$GITHUB_TOKEN" > .env 
                 python ./scripts/fetch_info.py
